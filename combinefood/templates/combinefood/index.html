@@ -1,6 +1,28 @@
-{% if output %}
-	<ul>
-	{% for 
-{% else %}
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+	<link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+    <meta charset="utf-8">
+    <title>shitty recipe generator</title>
+  </head>
+  <body>
+	<div class="protein">
+    	<img src="" alt="protein">
+		<p> {{ protein_name }} </p>
+	</div>
+	<div class="carb">
+		<img src="" alt="carb">
+		<p> {{ carb_name }} </p>
+	</div>
+	<div class="veg1">
+		<img src="" alt="veg1">
+		<p> {{ veg1_name }} </p>
+	</div>
+	<div class="veg2">
+		<img src="" alt="veg2">
+		<p> {{ veg2_name }} </p>
+	</div>
+  </body>
+</html>
 
-{% endif %}

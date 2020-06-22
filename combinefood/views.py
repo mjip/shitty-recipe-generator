@@ -10,6 +10,11 @@ def index(request):
 	veg2 = vegs.last()
 	carb = Food.objects.filter(category='carb').order_by('?').first()
 
-	output = "{} {} {} {}".format(protein.name, veg1.name, veg2.name, carb.name)
+	context = {
+		'protein_name': protein.name,
+		'carb_name': carb.name,
+		'veg1_name': veg1.name,
+		'veg2_name': veg2.name,
+	}
 
-	return HttpResponse(output)
+	return render(request, 'combinefood/index.html', context)
